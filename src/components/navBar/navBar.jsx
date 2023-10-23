@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/cartWidget';
+import './navBar.css';
 
 const arraydeCategorias = [
     "electronics",
-    "jewelry",
+    "jewelery",
     "men's clothing",
     "women's clothing"
 ];

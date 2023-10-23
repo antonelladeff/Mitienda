@@ -1,0 +1,15 @@
+.container-list {
+    background-color: rgb(198, 202, 202);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-block: 2rem;
+
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

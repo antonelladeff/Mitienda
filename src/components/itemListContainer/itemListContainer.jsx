@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from 'react'
+import { useEffect } from 'react'
 import { Spin } from 'antd';
 import Item from "../Item/item";
+import "./ItemListContainer.css"
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
@@ -17,24 +19,26 @@ const ItemListContainer = ({ greeting }) => {
         fetch(url)
             .then(res => res.json())
             .then(json => {
-                console.log(json);
-                setProducts(json);
+                setProducts(json)
                 setLoading(false);
             })
             .catch((error) => console.error(error));
-        console.log(id)
+
     }, [id]);
 
     return (
-        <div>
-            <h2 className="saludo">{greeting}</h2>
+        <div className={loading ? "spinner" : "container-list"}>
             {loading ? (
                 <Spin />
             ) : (
-                products.map((prod) => <Item key={prod.id} producto={prod} />)
+                products && products.length > 0 ? (
+                    products.map((prod) => <Item key={prod.id} product={prod} />)
+                ) : (
+                    <p>No hay productos disponibles en esta categoría.</p>
+                )
             )}
         </div>
     );
-};
 
+}
 export default ItemListContainer;
