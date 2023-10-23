@@ -13,3 +13,19 @@
     align-items: center;
     min-height: 100vh;
 }
+
+
+.no-products-container {
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    margin-left: 520px;
+}
+
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap;
+}

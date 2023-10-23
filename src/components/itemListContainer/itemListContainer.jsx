@@ -5,6 +5,7 @@ import Item from "../Item/item";
 import "./ItemListContainer.css"
 import { useParams } from "react-router-dom";
 
+
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
@@ -34,11 +35,14 @@ const ItemListContainer = () => {
                 products && products.length > 0 ? (
                     products.map((prod) => <Item key={prod.id} product={prod} />)
                 ) : (
-                    <p>No hay productos disponibles en esta categoría.</p>
+                    <div className="no-products-container">
+                        <p className="error-message">No hay producto disponible.</p>
+                    </div>
                 )
             )}
         </div>
     );
-
 }
+
 export default ItemListContainer;
+

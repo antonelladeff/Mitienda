@@ -34,7 +34,7 @@
 
 
 .product-image:hover {
-    transform: scale(2.2);
+    transform: scale(1.5);
 }
 
 .product-description {
