@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { Spin } from 'antd';
-import Item from "../Item/item";
 import "./ItemListContainer.css"
 import { useParams } from "react-router-dom";
+import ItemList from './itemList'
 
 
 const ItemListContainer = () => {
@@ -28,19 +27,8 @@ const ItemListContainer = () => {
     }, [id]);
 
     return (
-        <div className={loading ? "spinner" : "container-list"}>
-            {loading ? (
-                <Spin />
-            ) : (
-                products && products.length > 0 ? (
-                    products.map((prod) => <Item key={prod.id} product={prod} />)
-                ) : (
-                    <div className="no-products-container">
-                        <p className="error-message">No hay producto disponible.</p>
-                    </div>
-                )
-            )}
-        </div>
+        <ItemList products={products} loading={loading} />
+
     );
 }
 
