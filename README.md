@@ -1,8 +1,21 @@
-# React + Vite
+Proyecto final de REACT en CoderHouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# TiendaOnline - Plataforma de Productos de Limpieza Online
 
-Currently, two official plugins are available:
+TiendaOnline es una plataforma en línea que ofrece una amplia gama de productos de limpieza para el hogar y la oficina. Facilitamos a nuestros clientes la compra de productos de alta calidad desde la comodidad de sus hogares.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Librerias y herramientas usadas en el proyecto:
+React + Vite
+Bootstrap
+Firebase + Firestore
+
+## Comandos
+Correr el proyecto: "npm run dev"
+Instalar nuevas dependencias/paquetes: "npm install"
+
+
+## Instalación
+
+No se requiere instalación para utilizar CleanStore. Solo visita nuestro sitio web [cleanstore.com](https://www.cleanstore.com) y comienza a explorar nuestra gama de productos.
+
