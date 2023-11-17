@@ -4,10 +4,10 @@ import CartWidget from '../CartWidget/cartWidget';
 import './navBar.css';
 
 const arraydeCategorias = [
-    "electronics",
-    "jewelery",
-    "men's clothing",
-    "women's clothing"
+    "limpieza",
+    "Jabon liquido",
+    "multiusos",
+    "Ambientadores",
 ];
 
 function Navbar() {
@@ -41,3 +41,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

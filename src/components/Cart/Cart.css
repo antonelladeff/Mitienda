@@ -1,0 +1,68 @@
+.car {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.car h1 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.productos {
+    margin-bottom: 20px;
+}
+
+.precio-total {
+    font-size: 23px;
+    color: #4CAF50;
+    margin-bottom: 40px;
+    text-align: end;
+
+
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-vaciar,
+.link-finalizar {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-vaciar {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.button-vaciar:hover {
+    background-color: #d32f2f;
+
+}
+
+.link-finalizar {
+    background-color: #4CAF50;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-finalizar:hover {
+    background-color: #45a049;
+
+}
+
+.empty-cart-message {
+    color: #555;
+    font-size: 18px;
+}

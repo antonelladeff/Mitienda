@@ -14,11 +14,11 @@
     gap: .2rem;
 }
 
-.cards h4 {
+.cardTitle {
     color: rgb(14, 17, 15);
 }
 
-.cards img {
+.cardImg {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
@@ -26,15 +26,14 @@
     transition: 1s;
 }
 
-.cards img:hover {
+.cardImg:hover {
     transform: scale(1.1);
 }
 
-.cards p {
+.cardPrice {
     font-size: 1rem;
     font-weight: 600;
 }
-
 
 .boton {
     width: 100%;
@@ -45,7 +44,6 @@
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
-
 }
 
 .boton:hover {

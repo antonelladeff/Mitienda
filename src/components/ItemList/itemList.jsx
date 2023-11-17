@@ -1,17 +1,18 @@
 import { Spin } from 'antd';
-import Item from "./item";
+import Item from "../Item/item";
+import styles from './styles.module.css';
 
 const ItemList = ({ products, loading }) => {
     return (
-        <div className={loading ? "spinner" : "container-list"}>
+        <div className={loading ? styles.spinner : styles['container-list']}>
             {loading ? (
                 <Spin />
             ) : (
                 products && products.length > 0 ? (
                     products.map((prod) => <Item key={prod.id} product={prod} />)
                 ) : (
-                    <div className="no-products-container">
-                        <p className="error-message">No hay producto disponible.</p>
+                    <div className={styles['no-products-container']}>
+                        <p className={styles['error-message']}>No hay producto disponible.</p>
                     </div>
                 )
             )}
@@ -19,6 +20,4 @@ const ItemList = ({ products, loading }) => {
     );
 }
 
-
-
-export default ItemList
+export default ItemList;

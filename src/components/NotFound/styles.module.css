@@ -1,4 +1,4 @@
-.not-found-container {
+.notFoundContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,16 +6,14 @@
     height: 100vh;
     background-color: #3d413e;
     color: #fcf4f4;
-
 }
 
-.not-found-title {
+.notFoundTitle {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-
-.not-found-link {
+.notFoundLink {
     font-size: 18px;
     color: #fdf6f6;
     text-decoration: none;
@@ -25,8 +23,7 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.not-found-link:hover {
+.notFoundLink:hover {
     background-color: #084e1a;
     color: #9ab99e;
-
 }

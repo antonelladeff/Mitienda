@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import "./ItemListContainer.css"
 import { useParams } from "react-router-dom";
-import ItemList from './itemList'
+import ItemList from '../ItemList/itemList'
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from "../../firebase/client"
 
 
 const ItemListContainer = () => {
@@ -11,20 +12,17 @@ const ItemListContainer = () => {
     const { id } = useParams()
 
 
+
     useEffect(() => {
-        const url = id
-            ? `https://fakestoreapi.com/products/category/${id}`
-            : `https://fakestoreapi.com/products`;
+        const productsRef = id ? query(collection(db, "products"), where("categoryId", "==", id)) : collection(db, "products")
 
-        fetch(url)
-            .then(res => res.json())
-            .then(json => {
-                setProducts(json)
-                setLoading(false);
+        getDocs(productsRef)
+            .then(snapshot => {
+                setProducts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
             })
-            .catch((error) => console.error(error));
-
-    }, [id]);
+            .catch(e => console.log(e))
+            .finally(() => setLoading(false))
+    }, [id])
 
     return (
         <ItemList products={products} loading={loading} />
