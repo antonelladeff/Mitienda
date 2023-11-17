@@ -6,16 +6,13 @@ TiendaOnline es una plataforma en línea que ofrece una amplia gama de productos
 
 
 ## Librerias y herramientas usadas en el proyecto:
-React + Vite
-Bootstrap
-Firebase + Firestore
+-React + Vite
+-Bootstrap
+-Firebase + Firestore
 
 ## Comandos
 Correr el proyecto: "npm run dev"
 Instalar nuevas dependencias/paquetes: "npm install"
 
 
-## Instalación
-
-No se requiere instalación para utilizar CleanStore. Solo visita nuestro sitio web [cleanstore.com](https://www.cleanstore.com) y comienza a explorar nuestra gama de productos.
 
