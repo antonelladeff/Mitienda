@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
-import './Cart.css';
+import { CartContext } from "../../Context/CartContext";
+import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import CartItem from "../CartItem/CartItem";
@@ -33,23 +33,23 @@ const Cart = () => {
     };
 
     return (
-        <div className="car">
-            <h1 className="">Detalle de la compra</h1>
-            <div className="productos enteros">
+        <div className={styles.cart}>
+            <h1 className={styles.title}>Detalle de la compra</h1>
+            <div className={styles.productsContainer}>
                 {cart.map((item) => (
                     <CartItem key={item.id} item={item} onUpdateQuantity={onUpdateQuantity} />
                 ))}
             </div>
             {cart.length > 0 ? (
                 <>
-                    <h2 className="precio-total">Precio total: ${totalPrice()}</h2>
-                    <div className="contenedor-botones">
-                        <button className="button-vaciar" onClick={handleEmptyCart}>Vaciar carrito</button>
-                        <Link className="link-finalizar" to="/checkout">Finalizar compra</Link>
+                    <h2 className={styles.totalPrice}>Precio total: ${totalPrice()}</h2>
+                    <div className={styles.buttonsContainer}>
+                        <button className={styles.emptyButton} onClick={handleEmptyCart}>Vaciar carrito</button>
+                        <Link className={styles.checkoutLink} to="/checkout">Finalizar compra</Link>
                     </div>
                 </>
             ) : (
-                <h2 className="empty-cart-message">El carrito está vacío</h2>
+                <h2 className={styles.emptyCartMessage}>El carrito está vacío</h2>
             )}
         </div>
     );
