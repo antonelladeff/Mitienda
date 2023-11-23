@@ -20,12 +20,6 @@ const Checkout = () => {
     };
 
     const comprar = (data) => {
-        // Validación básica del formulario
-        if (!data.nombre || !data.email || !data.telefono || !paymentValid) {
-            alert("Por favor, complete todos los campos del formulario y seleccione un método de pago.");
-            return;
-        }
-
         setLoading(true);
 
         const order = {
